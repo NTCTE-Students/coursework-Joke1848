@@ -19,6 +19,8 @@ use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
+use App\Orchid\Screens\CourseEditScreen;
+use App\Orchid\Screens\CourseViewScreen;
 
 /*
 |--------------------------------------------------------------------------
@@ -102,3 +104,5 @@ Route::screen('/examples/charts', ExampleChartsScreen::class)->name('platform.ex
 Route::screen('/examples/cards', ExampleCardsScreen::class)->name('platform.example.cards');
 
 //Route::screen('idea', Idea::class, 'platform.screens.idea');
+Route::screen('/courses', CourseViewScreen::class)->name('platform.courses');
+Route::screen('/course/{course?}', CourseEditScreen::class)->name('platform.course.edit');

@@ -66,4 +66,8 @@ class User extends Authenticatable
         'updated_at',
         'created_at',
     ];
+    public function checks()
+    {
+        return $this->hasMany(Check::class);
+    }
 }
